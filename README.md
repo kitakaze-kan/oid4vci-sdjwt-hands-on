@@ -1,15 +1,30 @@
 # OID4VCI + OID4VP Hands‑On (SD‑JWT / Key‑Binding)
 
+## 0. Intro
+
+このレポジトリは、下記の仕様に基づいたワークショップ用のレポジトリです。
+
+- OID4VCI pre-authorization code & SD-JWT による VC 発行
+- OID4VP cross device flow による VC 検証
+- Sphereon Wallet による VC の受け取りと検証
+
+Sphereon Wallet
+
+ios: https://apps.apple.com/jp/app/sphereon-wallet/id1661096796
+
+Android: https://play.google.com/store/apps/details?id=com.sphereon.ssi.wallet
+
 ---
 
 ## 1. 前提ソフトウェア
 
-| tool          | 最低バージョン | 確認コマンド    |
-| ------------- | -------------- | --------------- |
-| Node.js (LTS) | ≥ 20           | `node -v`       |
-| pnpm          | ≥ 8            | `pnpm -v`       |
-| git           | any            | `git --version` |
-| ngrok         | (任意)         | `ngrok version` |
+| tool            | 最低バージョン | 確認コマンド    |
+| --------------- | -------------- | --------------- |
+| Node.js (LTS)   | ≥ 20           | `node -v`       |
+| pnpm            | ≥ 8            | `pnpm -v`       |
+| git             | any            | `git --version` |
+| ngrok           | (任意)         | `ngrok version` |
+| Sphereon Wallet | 最新版         | `-`             |
 
 > **Mac** は `brew install node pnpm ngrok` で揃います。Windows／Linux は各公式手順を参照。
 
