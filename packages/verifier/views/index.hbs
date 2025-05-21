@@ -1,0 +1,31 @@
+<h2>Scan to present <code>PersonCredential</code></h2>
+<div style="width: 200px; height: 200px;">{{{qrSvg}}}</div>
+<p><small>{{link}}</small></p>
+
+<!-- 結果表示用の領域を追加 -->
+<div id="result" style="display: none;">
+  <h3>検証結果</h3>
+  <div id="resultContent"></div>
+</div>
+
+<script>
+// 定期的に結果をチェックする関数
+async function checkResult() {
+  try {
+    const response = await fetch('/verifier/check-result');
+    const data = await response.json();
+    
+    if (data.hasResult) {
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('resultContent').innerHTML = `
+        <pre>${JSON.stringify(data.result, null, 2)}</pre>
+      `;
+    }
+  } catch (error) {
+    console.error('Error checking result:', error);
+  }
+}
+
+// 5秒ごとに結果をチェック
+setInterval(checkResult, 3000);
+</script>

@@ -1,0 +1,25 @@
+{
+  "name": "verifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "@sd-jwt/core": "^0.10.0",
+    "@sd-jwt/sd-jwt-vc": "^0.10.0",
+    "@sphereon/pex": "5.0.0-unstable.28",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "qrcode": "^1.5.4",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.4"
+  }
+}

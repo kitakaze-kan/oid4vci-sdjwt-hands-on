@@ -1,0 +1,49 @@
+{
+  "name": "oid4vci-sdjwt-hands-on",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen:keys": "pnpm exec ts-node-esm scripts/gen-keys.ts",
+    "issuer": "pnpm --filter issuer dev",
+    "verifier": "pnpm --filter verifier dev",
+    "gateway:dev": "pnpm --filter gateway dev",
+    "dev": "concurrently \"pnpm issuer\" \"pnpm verifier\" \"pnpm gateway\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.1",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.19",
+    "@types/uuid": "^10.0.0",
+    "concurrently": "^9.1.2",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@cef-ebsi/key-did-resolver": "^2.1.0",
+    "@noble/curves": "^1.9.1",
+    "@or13/did-jwk": "^0.0.4",
+    "@sd-jwt/crypto-nodejs": "^0.10.0",
+    "@sd-jwt/sd-jwt-vc": "^0.10.0",
+    "@sd-jwt/types": "^0.10.0",
+    "@sphereon/ssi-sdk-ext.did-resolver-jwk": "^0.28.0",
+    "@transmute/did-key.js": "0.3.0-unstable.10",
+    "did-resolver": "^4.1.0",
+    "dotenv": "^16.5.0",
+    "jose": "^6.0.11",
+    "key-did-resolver": "^4.0.0",
+    "multiformats": "^13.3.4",
+    "uuid": "^11.1.0"
+  }
+}

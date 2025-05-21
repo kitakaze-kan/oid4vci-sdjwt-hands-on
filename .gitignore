@@ -1,0 +1,41 @@
+# ───────── node / pnpm ─────────
+node_modules/
+.pnpm-store/
+
+# ───────── build artifacts ─────────
+**/dist/
+**/build/
+*.js
+*.js.map
+*.d.ts
+
+# ───────── env / secrets ─────────
+.env
+
+# ───────── generated keys (hands‑on) ─────────
+packages/**/keys/
+packages/commons/keys/
+
+# ───────── runtime output ─────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ───────── coverage / test ─────────
+coverage/
+.nyc_output/
+
+# ───────── IDE / OS junk ─────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ───────── misc temp ─────────
+.tmp/
+.temp/
+
+# ───────── key ─────────
+packages/commons/keys/

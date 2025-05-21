@@ -1,0 +1,16 @@
+{
+    "id": "PersonCredential_PD",
+    "input_descriptors": [
+      {
+        "id": "person_vc",
+        "format": { "vc+sd-jwt": { "alg": ["ES256"] } },
+        "constraints": {
+          "fields": [
+            { "path": ["$.vc.type[*]"], "filter": { "type": "string", "const": "PersonCredential" } },
+            { "path": ["$.vc.credentialSubject.firstName"] }
+          ]
+        }
+      }
+    ]
+  }
+  
