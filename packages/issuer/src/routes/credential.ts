@@ -62,6 +62,7 @@ credential.post("/credential", async (req, res) => {
     family_name: "Smith",
     birthDate: "1990-05-01",
     address: "Wonderland 1-2-3",
+    //宿題: VCにisOver20を付け足す
   });
 
   //選択的開示を可能にするプロパティを指定

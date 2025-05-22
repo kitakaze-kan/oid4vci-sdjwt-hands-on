@@ -62,4 +62,9 @@ pnpm dev                           # Gateway on :3000
 - DCQL
 - 最新の OID4VCI / OID4VP のキャッチアップ
 
-参加者は 2 回終了時に **「発行 → 提示 → 検証をカスタマイズしながら一周できる」** スキルを獲得します。
+### DAY1 宿題&事前課題
+
+    1. PersonCredential に isOver20 というプロパティを追加する
+        - hint: metadata も修正が必要です。
+
+    2.Verifier サイトを立ち上げ、QR をウォレットで読み取って VP を試してみる

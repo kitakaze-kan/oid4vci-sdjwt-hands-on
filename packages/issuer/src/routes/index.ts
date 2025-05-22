@@ -6,7 +6,7 @@ import { createQR } from "../utils/qr.js";
 export const index = Router();
 
 index.get("/", async (_req, res) => {
-  const preAuthCode = uuid().replace(/-/g, "");
+  const preAuthCode = uuid().replace(/-/g, ""); //preAuthCodeを生成
   savePreAuthCode(preAuthCode);
   console.log("preAuthCode: ", preAuthCode);
 

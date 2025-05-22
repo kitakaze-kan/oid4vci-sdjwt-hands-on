@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gen:keys": "pnpm exec ts-node-esm scripts/gen-keys.ts",
+    "gen:keys": "pnpm exec tsx scripts/gen-keys.ts",
     "issuer": "pnpm --filter issuer dev",
     "verifier": "pnpm --filter verifier dev",
     "gateway:dev": "pnpm --filter gateway dev",
