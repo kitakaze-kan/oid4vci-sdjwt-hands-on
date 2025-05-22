@@ -11,14 +11,12 @@ export type PersonType = {
   family_name: string;
   birthDate: string;
   address: string;
-  isOver20: boolean;
 };
 export const Person = z.object({
   given_name: z.string(),
   family_name: z.string(),
   birthDate: z.string(),
   address: z.string(),
-  isOver20: z.boolean(),
 });
 
 export async function issuePersonVc<T extends Extensible>(
