@@ -56,6 +56,30 @@ pnpm dev                           # Gateway on :3000
 
 ---
 
+### #2 の分解
+
+- path: `/`
+
+  - リクエストオブジェクトの生成
+  - state, nonce の生成
+  - deepLink として送信
+
+- path: `/request-obj/:id`
+
+  - リクエストオブジェクトの取得
+  - jwt 化して返却
+
+- path: `/callback`
+
+  - vp_token, presentation_submission, state の取得
+  - state の validation
+  - vp_token(sd-jwt+kb-jwt)の validation
+  - 結果の保存と返却
+
+- path: `/check-result`
+  - /callback で検証された結果の返却
+  - 結果がない場合は未検証を返却
+
 ### 追加課題（時間が余れば）
 
 - Status List
