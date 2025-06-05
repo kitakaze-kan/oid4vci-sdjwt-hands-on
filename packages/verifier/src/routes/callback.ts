@@ -16,7 +16,7 @@ callback.post("/callback", async (req, res) => {
     console.log("vp", JSON.stringify(vp, null, 2));
 
     /** ───────────────────────────────────────
-     *  1) state / nonce の照合
+     *  1) state の照合
      * ─────────────────────────────────────── */
     const auth = getAuthRequest(vp.state);
     if (!auth) return res.status(400).send("state mismatch");

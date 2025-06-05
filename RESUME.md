@@ -92,3 +92,7 @@ pnpm dev                           # Gateway on :3000
         - hint: metadata も修正が必要です。
 
     2.Verifier サイトを立ち上げ、QR をウォレットで読み取って VP を試してみる
+
+### DAY2 宿題
+
+    1. isOver20を含めたVCを発行したのちに、isOver20だけの掲示を求めるVPを作成してみる

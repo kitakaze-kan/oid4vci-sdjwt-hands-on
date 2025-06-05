@@ -87,6 +87,18 @@ metadata.get("/.well-known/openid-credential-issuer", (_req, res) => {
               },
             ],
           },
+          isOver20: {
+            display: [
+              {
+                name: "20歳以上",
+                locale: "ja-JP",
+              },
+              {
+                name: "Over 20",
+                locale: "en-US",
+              },
+            ],
+          },
         },
       },
     },

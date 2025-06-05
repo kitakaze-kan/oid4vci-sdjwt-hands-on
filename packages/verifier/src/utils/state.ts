@@ -68,8 +68,8 @@ export const requiredFields = ["given_name", "family_name", "address"];
 export const requestObj = {
   client_id: `${VERIFIER_BASE}/callback`,
   client_id_scheme: "redirect_uri",
-  response_mode: "direct_post", //redirect_uriもある
-  response_uri: `${VERIFIER_BASE}/callback`, //response_mode=redirect_uriの場合はredirect_uriを指定
+  response_mode: "direct_post", //fragmentもある
+  response_uri: `${VERIFIER_BASE}/callback`, //response_mode=fragmentの場合はredirect_uriを指定
   response_type: "vp_token",
   client_metadata: {
     id_token_signing_alg_values_supported: ["EdDSA", "ES256", "ES256K"],

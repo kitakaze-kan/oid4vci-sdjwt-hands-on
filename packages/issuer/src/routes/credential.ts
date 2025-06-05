@@ -62,11 +62,12 @@ credential.post("/credential", async (req, res) => {
     family_name: "Smith",
     birthDate: "1990-05-01",
     address: "Wonderland 1-2-3",
+    isOver20: true,
   });
 
   //選択的開示を可能にするプロパティを指定
   const disclosureFrame = {
-    _sd: ["given_name", "family_name", "address", "birthDate"],
+    _sd: ["given_name", "family_name", "address", "birthDate", "isOver20"],
   } as DisclosureFrame<typeof claims>;
 
   /* ③ SD-JWT VC 発行時に cnf を埋め込む */
